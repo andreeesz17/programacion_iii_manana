@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head> 
+
+</head>
+<body>  
+    <h1>Registro Oficiales</h1>
+    <form action="procesar.php" method="post">
+        <table border="0">
+            <tr>
+                <th>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                </th>
+                <th>
+                    <label for="correo">Correo Electronico:</label>
+                    <input type="email" id="correo" name="correo">
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <label for="fecha">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha" name="fecha">
+                </th>
+                <th>
+                    <label for="cedula">Número de cédula:</label>
+                    <input type="text" id="cedula" name="cedula" maxlength="10" placeholder="Ej: 0123456789" required>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="genero">Genero:</label>
+                    <input type="radio" id="m" name="genero" value="m"><label for="m">Masculino</label>
+                    <input type="radio" id="f" name="genero" value="f"><label for="f">Femenino</label>
+                </td>
+                <td>
+                    <label for="rango">Rango:</label>
+                    <select id="rango" name="rango">
+                        <option value="subteniente">Subteniente</option>
+                        <option value="teniente">Teniente</option>
+                        <option value="capitan">Capitán</option>
+                        <option value="mayor">Mayor</option>
+                        <option value="teniente_coronel">Teniente Coronel</option>
+                        <option value="coronel">Coronel</option>
+                        <option value="general">General</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="comentarios">Comentarios:</label>
+                    <textarea id="comentarios" name="comentarios" rows="5"></textarea>
+                </td>
+                <td>
+                    <input type="checkbox" id="acepto" name="acepto" required>
+                    <label for="acepto">Confirmo que la información ingresada es verídica y acepto los términos y condiciones del registro policial.</label>
+
+                </td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpiar">
+    </form>
+</body>
+</html>
