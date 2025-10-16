@@ -1,57 +1,38 @@
 console.log("Operadores Aritmeticos en Javascript");
 
-numero1=10;
-numero2=20;
+numero1=20;
+numero2=5;
+console.log("suma ");
+suma = numero1+numero2;
+console.log("Resultado", suma);
+console.log("resta ");
+resta = numero1-numero2;
+console.log("Resultado", resta);
+console.log("Multiplicación ");
+multiplicacion = numero1*numero2;
+console.log("Resultado", multiplicacion);
+console.log("División ");
+division = numero1/numero2;
+console.log("Resultado", division);
+console.log("Módulo ");
+modulo = numero1%numero2;
+console.log("Resultado", modulo);
+console.log("Potencia ");
+potencia = numero1**numero2;
+console.log("Resultado", potencia);
 
-console.log("suma");
-suma=numero1+numero2;
-console.log("Resultado de la suma",suma);
+console.log("Operadores Comparación");
+console.log("Igualdad debil ==", "5"==5);
+console.log("Igualdad Estricta ===", "5"===5);
+console.log("Desigualdad Debil  !=", "5"!=5);
+console.log("Desigualdad Estricta  !==", "5"!==5);
+console.log("Mayor que >", "5">5);
+console.log("Menor que <", "5"<5);
+console.log("Mayor o igual >=", "5">=5);
+console.log("Menor o igual <=", "5"<=5);
 
-console.log("resta");
-resta=numero1-numero2;
-console.log("Resultado de la resta",resta);
 
-console.log("multiplicacion");
-multiplicacion=numero1*numero2;
-console.log("Resultado de la multiplicacion",multiplicacion);
-
-console.log("division");
-division=numero1/numero2;
-console.log("Resultado de la division",division);
-
-console.log("modulo");
-modulo=numero1%numero2;
-console.log("Resultado del modulo",modulo);
-
-console.log("potencia");
-exponente=numero1**numero2;
-console.log("Resultado del exponente",potencia);
-
-console.log("incremento");
-numero1++;
-console.log("Resultado del incremento",numero1);
-
-console.log("decremento");
-numero1--;
-console.log("Resultado del decremento",numero1);
-
-console.log("comparacion");
-console.log("igualdad debil ==", "5"==5);
-console.log("igualdad estricta ===","5"===5);
-console.log("diferente debil !=", "5"!=5);
-console.log("diferente estricto !==", "5"!==5);
-console.log("mayor que >", "5">3);
-console.log("menor que <", "5"<3);
-console.log("mayor o igual que >=", "5">=3);
-console.log("menor o igual que <=", "5"<=3);
-
-console.log("operadores logicos");
+console.log("Operadores Lógica");
 console.log("y And &&", "5"<=5 && "5">=5);
-console.log("o Or ||", "5"<=5 || "6"<4);
-console.log("negacion Not !", !(5==5));
-
-
-
-
-
-
+console.log("o Or ||", "5"<=5 || "6">=4);
+console.log("Negación  !", !(5==5));
