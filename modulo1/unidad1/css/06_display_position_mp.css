@@ -1,0 +1,24 @@
+.body {
+    height: 1000px;
+    position: relative;
+}
+.estatico {
+    position: static;
+    background-color: rgb(15, 32, 75); 
+    padding: 10px;
+}
+.relativo {
+    position: relative;
+    background-color: rgb(0, 255, 157); 
+    padding: 10px;
+    top: 50px;
+    left: 50px;
+}
+.fijo {
+    position: fixed;
+    background-color: rgb(30, 30, 30); 
+    color: rgb(0, 255, 255); 
+    padding: 10px;
+    bottom: 50px;
+    right: 50px;
+}

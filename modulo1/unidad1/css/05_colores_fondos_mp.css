@@ -1,0 +1,11 @@
+.fondo {
+    color:white;
+    background-image: url("fondo_police.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(0, 89, 255);
+    padding: 80px;
+    opacity: 1;
+    text-align: center;
+    font-size: 100px;
+}
