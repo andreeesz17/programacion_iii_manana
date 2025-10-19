@@ -1,0 +1,22 @@
+div p {
+    color: rgb(0, 255, 157); 
+    background-color: rgb(15, 32, 75); 
+    text-align: center;
+}
+
+.ul > li {
+    color: rgb(255, 0, 21); 
+    background-color: rgb(47, 46, 46); 
+    text-align: center;
+}
+
+a:hover {
+    color: rgb(0, 140, 255); 
+    text-decoration: underline;
+}
+
+input[type="text"] {
+    border: 2px solid rgb(0, 255, 255); 
+    color: rgb(2, 2, 2);
+    width: 200px;
+}

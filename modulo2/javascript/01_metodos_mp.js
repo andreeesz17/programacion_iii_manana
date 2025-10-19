@@ -1,0 +1,1 @@
+console.log("Bienvenido a Safe Case Police - Sistema de Gestión de Expedientes Policiales");
