@@ -1,6 +1,3 @@
-// Safe Case Police - Interfaces TypeScript
-// Sistema de Gestión de Expedientes Policiales
-
 var oficial1 = {
     badge: 'BADGE_001',
     nombre: 'Carlos Andrés García'

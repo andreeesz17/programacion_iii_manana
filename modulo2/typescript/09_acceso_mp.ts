@@ -1,29 +1,26 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Expediente = void 0;
+export class Expediente {
+    private idGeneric: string = 'EXP-2024-';
+    private numeroExpediente: number;
+    private cota!: string;
 
-// Safe Case Police - Encapsulamiento de Datos TypeScript
-// Sistema de Gestión de Expedientes Policiales
-
-var Expediente = /** @class */ (function () {
-    function Expediente(numeroExpediente) {
-        this.idGeneric = 'EXP-2024-';
+    constructor(numeroExpediente: number) {
         this.numeroExpediente = numeroExpediente;
         this.generarCota();
     }
-    Expediente.prototype.generarCota = function () {
-        this.cota = (new Date()).toDateString();
-    };
-    Expediente.prototype.getCota = function () {
+
+    private generarCota(): void {
+        this.cota = new Date().toDateString();
+    }
+
+    getCota(): string {
         return this.cota;
-    };
-    Expediente.prototype.getAtributes = function () {
+    }
+
+    getAtributes(): { numeroExpediente: number; cota: string; id: string } {
         return {
             numeroExpediente: this.numeroExpediente,
             cota: this.cota,
             id: this.idGeneric
         };
-    };
-    return Expediente;
-}());
-exports.Expediente = Expediente;
+    }
+}

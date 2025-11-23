@@ -1,6 +1,3 @@
-// Safe Case Police - Polimorfismo TypeScript
-// Sistema de Gestión de Expedientes Policiales
-
 import { PersonalPolicial } from "./11_herencia_mp";
 
 export class EspecialistaForense extends PersonalPolicial {

@@ -1,6 +1,3 @@
-// Safe Case Police - Uso de Herencia TypeScript
-// Sistema de Gestión de Expedientes Policiales
-
 import { PersonalPolicial, Detective } from "./11_herencia_mp";
 
 const oficial1 = new PersonalPolicial('Andrés García', 'Oficial');

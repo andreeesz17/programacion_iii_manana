@@ -1,19 +1,13 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Oficial = void 0;
+export class Oficial {
+    nombre: string;
+    badge: string;
 
-// Safe Case Police - Clases TypeScript
-// Sistema de Gestión de Expedientes Policiales
-
-var Oficial = /** @class */ (function () {
-    function Oficial(nombre, badge) {
+    constructor(nombre: string, badge: string) {
         this.nombre = nombre;
         this.badge = badge;
     }
-    Oficial.prototype.presentarse = function () {
-        console.log("Soy ".concat(this.nombre, " con Badge ").concat(this.badge));
-    };
-    return Oficial;
-}());
-exports.Oficial = Oficial;
 
+    presentarse(): void {
+        console.log(`Soy ${this.nombre} con Badge ${this.badge}`);
+    }
+}

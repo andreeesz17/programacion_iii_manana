@@ -1,9 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 
-// Safe Case Police - Interfaces TypeScript Avanzadas
-// Sistema de Gestión de Expedientes Policiales
-
 var oficial1 = {
     badge: 'BADGE_001',
     nombre: 'Carlos Andrés García'

@@ -2,9 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Expediente = void 0;
 
-// Safe Case Police - Encapsulamiento de Datos TypeScript
-// Sistema de Gestión de Expedientes Policiales
-
 var Expediente = /** @class */ (function () {
     function Expediente(numeroExpediente) {
         this.idGeneric = 'EXP-2024-';

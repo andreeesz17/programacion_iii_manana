@@ -2,9 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Oficial = void 0;
 
-// Safe Case Police - Clases TypeScript
-// Sistema de Gestión de Expedientes Policiales
-
 var Oficial = /** @class */ (function () {
     function Oficial(nombre, badge) {
         this.nombre = nombre;

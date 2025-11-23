@@ -2,17 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Sospechoso = void 0;
 
-// Safe Case Police - Interfaces TypeScript
-// Sistema de Gestión de Expedientes Policiales
-
-// Interface básica de Sospechoso
 var sospechoso1 = {
     id: 'SOS_001',
     nombre: 'Juan Pérez',
     edad: 35
 };
 
-// Interface con propiedades opcionales
 var sospechoso2 = {
     id: 'SOS_002',
     nombre: 'Carlos Mendoza',
