@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Safe Case Police - Inventario de Evidencias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h2 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    thead {
+      background-color: #2c3e50;
+      color: white;
+    }
+    th {
+      padding: 12px;
+      text-align: left;
+      font-weight: bold;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #ddd;
+    }
+    tbody tr:hover {
+      background-color: #f9f9f9;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Safe Case Police - Inventario de Evidencias</h2>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Tipo de Evidencia</th>
+        <th>Descripción</th>
+        <th>Valor de Evidencia</th>
+        <th>Cantidad</th>
+        <th>Ubicación Almacén</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpoTabla"></tbody>
+  </table>
+
+  <script src="07_productos_mp.js"></script>
+</body>
+</html>

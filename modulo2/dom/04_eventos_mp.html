@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Safe Case Police - Sistema de Eventos</title>
+    <script src="04_eventos_mp.js" defer></script>
+</head>
+<body>
+    <h1>Sistema de Eventos - Safe Case Police</h1>
+    
+    <div id="contenedor"></div>
+    
+    <button id="crearExpediente">Crear Expediente</button>
+    <button id="eliminarExpediente">Eliminar Expediente</button>
+    <button onclick="alert('Sistema de Expedientes Policiales Activado')">Verificar Sistema</button>
+    <button onclick="registrarOficial('Oficial autorizado para acceder')">Registrar Oficial</button>
+
+    <p id="parrafo">Haz doble click para confirmar apertura de expediente</p>
+    
+    <form id="formularioExpediente" style="margin-top:20px;">
+        <input type="text" id="numeroExpediente" placeholder="Número de Expediente"/>
+        <button type="submit">Registrar Expediente</button>
+    </form>
+
+</body>
+</html>

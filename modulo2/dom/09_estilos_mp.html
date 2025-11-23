@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Safe Case Police - Panel de Control de Seguridad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+    h1 {
+      text-align: center;
+      color: #e74c3c;
+    }
+    #indicadorSeguridad {
+      width: 150px;
+      height: 150px;
+      background-color: #27ae60;
+      border-radius: 50%;
+      margin: 20px auto;
+      transition: all 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      font-size: 18px;
+      box-shadow: 0 0 20px rgba(39, 174, 96, 0.8);
+    }
+    .controles {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    button {
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .nivel-bajo {
+      background-color: #e74c3c;
+    }
+    .nivel-bajo:hover {
+      background-color: #c0392b;
+      transform: scale(1.05);
+    }
+    .nivel-medio {
+      background-color: #f39c12;
+    }
+    .nivel-medio:hover {
+      background-color: #d68910;
+      transform: scale(1.05);
+    }
+    .nivel-alto {
+      background-color: #27ae60;
+    }
+    .nivel-alto:hover {
+      background-color: #229954;
+      transform: scale(1.05);
+    }
+    .reiniciar {
+      background-color: #3498db;
+    }
+    .reiniciar:hover {
+      background-color: #2980b9;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Safe Case Police - Panel de Control de Seguridad</h1>
+
+  <div id="indicadorSeguridad">SEGURO</div>
+
+  <div class="controles">
+    <button class="nivel-bajo" onclick="cambiarEstadoAlerta()">🚨 Alerta Roja</button>
+    <button class="nivel-medio" onclick="aumentarNivelAmenaza()">⚠️ Aumentar Amenaza</button>
+    <button class="nivel-alto" onclick="reiniciar()">✅ Normalizar Sistema</button>
+  </div>
+
+  <script src="09_estilos_mp.js"></script>
+</body>
+</html>
