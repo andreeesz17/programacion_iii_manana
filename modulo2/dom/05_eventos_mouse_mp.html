@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Safe Case Police - Eventos de Mouse y Touch</title>
+    <script src="05_eventos_mouse_mp.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .boton-interactivo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            border: 2px solid #333;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Safe Case Police - Sistema de Eventos Interactivos</h1>
+    
+    <div id="zonaAutenticacion" class="boton-interactivo" style="width:200px; height:200px; background: #4CAF50;">
+        ÁREA DE AUTENTICACIÓN
+    </div>
+    
+    <br/>
+    
+    <div id="panelSensor" class="boton-interactivo" style="width:200px; height:200px; background: #2196F3;">
+        PANEL TÁCTIL BIOMÉTRICO
+    </div>
+</body>
+</html>

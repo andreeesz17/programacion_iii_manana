@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Safe Case Police - Gestor de Tareas de Investigación</title>
+    <script src="06_tareas_mp.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .contenedor-input {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #tareaInvestigacion {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #333;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        #agregar {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #agregar:hover {
+            background-color: #45a049;
+        }
+        #listaTareas {
+            list-style: none;
+            padding: 0;
+        }
+        #listaTareas li {
+            padding: 12px;
+            background-color: white;
+            border-left: 4px solid #4CAF50;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btn-eliminar {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .btn-eliminar:hover {
+            background-color: #da190b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Safe Case Police - Gestor de Tareas de Investigación</h1>
+    
+    <div class="contenedor-input">
+        <input type="text" id="tareaInvestigacion" placeholder="Registrar nueva tarea de investigación..."/>
+        <button id="agregar">Agregar Tarea</button>
+    </div>
+    
+    <ul id="listaTareas"></ul>
+</body>
+</html>
