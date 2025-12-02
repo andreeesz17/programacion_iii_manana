@@ -5,7 +5,10 @@ import {
 import { CategoriesService } from './categories.service';
 import { CreateCategoryDto } from './dto/create-category.dto';
 import { UpdateCategoryDto } from './dto/update-category.dto';
+import { Pagination } from 'nestjs-typeorm-paginate';
+import { Category } from './category.entity';
 import { SuccessResponseDto } from 'src/common/dto/response.dto';
+import { QueryDto } from 'src/common/dto/query.dto';
 
 @Controller('categories')
 export class CategoriesController {
@@ -20,26 +23,17 @@ export class CategoriesController {
 
   @Get()
   async findAll(
-    @Query('page') page = 1,
-    @Query('limit') limit = 10,
-    @Query('search') search?: string,
-    @Query('searchField') searchField = 'name',
-    @Query('sortBy') sortBy = 'id',
-    @Query('sortOrder') sortOrder: 'ASC' | 'DESC' = 'ASC',
-  ){
-    limit = Number(limit);
-    page = Number(page);
-    limit = limit > 100 ? 100 : limit;
+    @Query() query: QueryDto,
+  ): Promise<SuccessResponseDto<Pagination<Category>>> {
+    if (query.limit && query.limit > 100) {
+      query.limit = 100;
+    }
 
-    const response = await this.categoriesService.findAll({
-      page,
-      limit,
-      search,
-      searchField,
-      sortBy,
-      sortOrder,
-    });
-    return new SuccessResponseDto('List Users successfully', response);
+    const result = await this.categoriesService.findAll(query);
+
+    if (!result) throw new InternalServerErrorException('Could not retrieve categories');
+
+    return new SuccessResponseDto('Categories retrieved successfully', result);
   }
 
   @Get(':id')
