@@ -1,9 +1,11 @@
-import ParentAreaTriangulo from "./props/ParentAreaTriangulo";
+import MultiSwitch from "./useState/MultiSwitch";
+
+
 
 function App() {
   return (
     <>
-      <ParentAreaTriangulo />
+      <MultiSwitch />
     </>
   );
 }
