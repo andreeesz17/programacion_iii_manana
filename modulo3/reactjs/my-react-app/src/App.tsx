@@ -1,13 +1,14 @@
-import MultiSwitch from "./useState/MultiSwitch";
+import { useState } from 'react';
+import { LoginContext } from './useContext/LoginContext';
+import LoginStatus from './useContext/LoginStatus';
 
+export default function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const toggleLogin = () => setIsLoggedIn(prev => !prev);
 
-
-function App() {
   return (
-    <>
-      <MultiSwitch />
-    </>
+    <LoginContext.Provider value={{ isLoggedIn, toggleLogin }}>
+      <LoginStatus />
+    </LoginContext.Provider>
   );
 }
-
-export default App;

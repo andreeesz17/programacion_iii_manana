@@ -1,0 +1,95 @@
+import { useEffect, useState } from 'react';
+
+export default function FetchUser() {
+  const [user, setUser] = useState<any | null>(null);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users/8')
+      .then(res => res.json())
+      .then(data => setUser(data));
+  }, []);
+
+  return (
+    <div>
+      <h3>Usuario:</h3>
+      {user ? (
+        <><p>{user.name} - {user.email}</p>
+        <p>Dirección: {user.address.street}</p>
+        <p>Latitud: {user.address.geo.lat}</p></>
+      ) : (
+        <p>Cargando...</p>
+      )}
+    </div>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Andrés Zambrano
