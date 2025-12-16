@@ -1,14 +1,12 @@
-import { useState } from 'react';
-import { LoginContext } from './useContext/LoginContext';
-import LoginStatus from './useContext/LoginStatus';
+import MoverCaja from './useRef/MoverCaja';
 
-export default function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const toggleLogin = () => setIsLoggedIn(prev => !prev);
-
+function App() {
+  
   return (
-    <LoginContext.Provider value={{ isLoggedIn, toggleLogin }}>
-      <LoginStatus />
-    </LoginContext.Provider>
+    <>
+    <MoverCaja />
+    
+    </>
   );
 }
+export default App;
