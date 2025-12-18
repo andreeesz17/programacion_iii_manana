@@ -1,49 +1,19 @@
+import { useRef } from 'react';
 
-import { useRef, useEffect } from 'react';
+export default function ReproductorSonido() {
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
-export default function MoverCaja() {
-  const boxRef = useRef(null);
-  const position = useRef({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const mover = (e:any) => {
-      const paso = 10;
-      switch (e.key) {
-        case 'ArrowUp':
-          position.current.y -= paso;
-          break;
-        case 'ArrowDown':
-          position.current.y += paso;
-          break;
-        case 'ArrowLeft':
-          position.current.x -= paso;
-          break;
-        case 'ArrowRight':
-          position.current.x += paso;
-          break;
-        default:
-          return;
-      }
-
-      const box:any = boxRef.current;
-      box.style.transform = `translate(${position.current.x}px, ${position.current.y}px)`;
-    };
-
-    window.addEventListener('keydown', mover);
-    return () => window.removeEventListener('keydown', mover);
-  }, []);
+  const reproducir = () => {
+    audioRef.current?.play();
+  };
 
   return (
-    <div
-      ref={boxRef}
-      style={{
-        width: '60px',
-        height: '60px',
-        backgroundColor: 'deepskyblue',
-        borderRadius: '50%',
-        position: 'relative',
-        transition: 'transform 0.1s ease'
-      }}
-    />
+    <div>
+      <button onClick={reproducir}>🔊 Reproducir sonido</button>
+      <audio
+        ref={audioRef}
+        src="https://www.soundjay.com/buttons/button-3.mp3"
+      />
+    </div>
   );
 }

@@ -1,10 +1,10 @@
-import MoverCaja from './useRef/MoverCaja';
+import ListaReducer from './useReducer/ListaReducer';
 
 function App() {
   
   return (
     <>
-    <MoverCaja />
+    <ListaReducer />
     
     </>
   );
