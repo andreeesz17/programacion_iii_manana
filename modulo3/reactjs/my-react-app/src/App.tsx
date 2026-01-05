@@ -1,10 +1,11 @@
-import ListaReducer from './useReducer/ListaReducer';
+import { GaleriaDiferida } from "./useTransition/GaleriaDiferida";
+
 
 function App() {
   
   return (
     <>
-    <ListaReducer />
+    <GaleriaDiferida/>
     
     </>
   );
