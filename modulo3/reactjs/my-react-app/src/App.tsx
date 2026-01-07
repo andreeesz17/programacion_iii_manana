@@ -1,11 +1,11 @@
-import { GaleriaDiferida } from "./useTransition/GaleriaDiferida";
+import EvitarParpadeo from "./useLayoutEffect/EvitarParpadeo";
 
 
 function App() {
   
   return (
     <>
-    <GaleriaDiferida/>
+    <EvitarParpadeo/>
     
     </>
   );
