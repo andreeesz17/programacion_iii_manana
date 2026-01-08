@@ -1,11 +1,11 @@
-import EvitarParpadeo from "./useLayoutEffect/EvitarParpadeo";
+import ListaUsuariosPaginado from "./formularios/ListaUsuariosPaginado";
 
 
 function App() {
   
   return (
     <>
-    <EvitarParpadeo/>
+    <ListaUsuariosPaginado/>
     
     </>
   );
