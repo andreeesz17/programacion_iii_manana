@@ -7,15 +7,15 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { CategoriesModule } from './categories/categories.module';
 import { PostsModule } from './posts/posts.module';
+import { BasicsModule } from './basics/basics.module';
 import { MailModule } from './mail/mail.module';
-import { MongooseModule } from '@nestjs/mongoose';
-import { CursosModule } from './cursos/cursos.module';
+// import { MongooseModule } from '@nestjs/mongoose';
+// import { CursosModule } from './cursos/cursos.module';
 
 @Module({
   imports: [
+    // MongooseModule.forRoot(process.env.MONGO_URI || ''),
     ConfigModule.forRoot({ isGlobal: true }),
-     // Conexión a MongoDB (Mongoose)
-    MongooseModule.forRoot(process.env.MONGO_URI || ''),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.DB_HOST,
@@ -24,15 +24,17 @@ import { CursosModule } from './cursos/cursos.module';
       password: process.env.DB_PASS,
       database: process.env.DB_NAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true,
+      synchronize: process.env.DB_SYNCHRONIZE === 'true'
+      //synchronize: true,
       //ssl: { rejectUnauthorized: false },
     }),
     AuthModule,
+    BasicsModule,
     UsersModule,
     CategoriesModule,
     PostsModule,
     MailModule,
-    CursosModule,
+    // CursosModule,
   ],
   controllers: [AppController],
   providers: [AppService],

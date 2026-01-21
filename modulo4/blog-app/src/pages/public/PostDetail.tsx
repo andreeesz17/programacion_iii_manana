@@ -1,4 +1,3 @@
-
 import { useEffect, useState, type JSX } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Box, Typography, Button } from "@mui/material";
@@ -16,9 +15,19 @@ export function PostDetail(): JSX.Element {
   const [post, setPost] = useState<Post | null>(null);
 
   useEffect((): void => {
-    axios.get("http://localhost:3000/posts?page=1&limit=2")
-      .then(res => setPost(res.data.data))
-      .catch(() => navigate("/"));
+    // Try real API, fallback to fake data
+    axios.get(`http://localhost:3000/posts/${id}`)
+      .then(res => setPost(res.data))
+      .catch(() => {
+        console.warn("Backend API not available, using fake data");
+        // Fake post data
+        const fakePost = {
+          id: parseInt(id || "1"),
+          title: `Post de ejemplo #${id}`,
+          content: `Este es el contenido del post #${id}.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
+        };
+        setPost(fakePost);
+      });
   }, [id]);
 
   if (!post) return <p>Cargando...</p>;

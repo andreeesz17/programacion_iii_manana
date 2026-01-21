@@ -1,10 +1,7 @@
-
-
-import type { RouteObject } from "react-router-dom";
+import { Home } from "../pages/public/Home";
 import { PostDetail } from "../pages/public/PostDetail";
 import PublicLayout from "../layouts/PublicLayout";
-import { Home } from "../pages/public/Home";
-
+import type { RouteObject } from "react-router-dom";
 
 export const publicRoutes: RouteObject = {
   path: "/",
