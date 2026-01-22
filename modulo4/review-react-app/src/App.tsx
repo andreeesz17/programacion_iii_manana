@@ -1,12 +1,14 @@
-import { InputParrafo } from './inputParrafo'
-import { Suma } from './suma'
+import CarritoDescuento from "./CarritoDescuento"
+import CobroIvaCupon from "./CobroIvaCupon"
+import NominaSemanal from "./NominaSemanal"
 
 function App() {
 
   return (
     <>
-      <InputParrafo />
-      <Suma />
+      <CobroIvaCupon />
+      <NominaSemanal />
+      <CarritoDescuento />
     </>
   )
 }
