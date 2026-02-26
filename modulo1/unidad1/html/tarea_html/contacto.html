@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto - SafeCase</title>
+</head>
+<body>
+  <header>
+    <h1>Contacto SafeCase</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="galeria.html">Galería</a></li>
+      <li><a href="documentacion.html">Documentación</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="formulario-contacto">
+      <h2>Formulario de Contacto</h2>
+
+      <form action="/enviar" method="POST">
+        <fieldset>
+          <legend>Información Personal</legend>
+          
+          <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+
+          <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div>
+            <label for="departamento">Departamento:</label>
+            <select id="departamento" name="departamento">
+              <option value="">Seleccione...</option>
+              <option value="tecnologia">Tecnología</option>
+              <option value="operaciones">Operaciones</option>
+              <option value="administracion">Administración</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalles de la Consulta</legend>
+          
+          <div>
+            <label for="fecha">Fecha del incidente:</label>
+            <input type="date" id="fecha" name="fecha">
+          </div>
+
+          <div>
+            <label for="prioridad">Nivel de prioridad:</label>
+            <input type="number" id="prioridad" name="prioridad" min="1" max="5">
+          </div>
+
+          <div>
+            <p>Tipo de consulta:</p>
+            <input type="radio" id="soporte" name="tipo" value="soporte">
+            <label for="soporte">Soporte técnico</label>
+            
+            <input type="radio" id="info" name="tipo" value="info">
+            <label for="info">Información general</label>
+          </div>
+
+          <div>
+            <input type="checkbox" id="terminos" name="terminos">
+            <label for="terminos">Acepto los términos y condiciones</label>
+          </div>
+
+          <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="5" cols="30"></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit">Enviar consulta</button>
+      </form>
+    </section>
+
+    <aside>
+      <h3>Información de Contacto</h3>
+      <address>
+        Sede Principal SafeCase<br>
+        Av. Mariana de Jesús<br>
+        Quito, Ecuador<br>
+        <a href="tel:+593-2-123-4567">+593 984936641</a>
+      </address>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Horario de atención: Lunes a Viernes, 08:00 - 17:00</p>
+  </footer>
+</body>
+</html>
